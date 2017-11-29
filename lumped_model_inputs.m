@@ -485,7 +485,7 @@ disp('Getting graphs ...')
 % finding analysis cycle
 figure,
 plot(y(:,3))
-legend('Ao flow',1);
+legend('Ao flow','NorthEast');
 title('Select analysis cycle: click on begining of systole')
 xlabel('time point');
 ylabel('flow (ml/s)');
@@ -567,20 +567,20 @@ end
 if (flag_output.graph_pressure_LA)&&(flag_output.graph_pressure_LV)&&(flag_output.graph_pressure_SA)
     figure,
     plot(time,P_LA,time,P_LV,time,P_SA)
-    legend('LA','LV','SA',1);
+    legend('LA','LV','SA','NorthEast');
     xlabel('time (s)');
     ylabel('pressure (mmHg)');
 elseif (flag_output.graph_pressure_SA)&&(flag_output.graph_pressure_LV)    
     figure,
     plot(time,P_SA,time,P_LV)
-    legend('LA','LV',1);
+    legend('LA','LV','NorthEast');
     xlabel('time (s)');
     ylabel('pressure (mmHg)');
 else
     if(flag_output.graph_pressure_LA)
         figure,
         plot(time,P_LA)
-        legend('LA',1);
+        legend('LA','NorthEast');
         xlabel('time (s)');
         ylabel('pressure (mmHg)');
     end
@@ -588,7 +588,7 @@ else
     if(flag_output.graph_pressure_LV)
         figure,
         plot(time,P_LV)
-        legend('LV',1);
+        legend('LV','NorthEast');
         xlabel('time (s)');
         ylabel('pressure (mmHg)');
     end
@@ -596,7 +596,7 @@ else
     if(flag_output.graph_pressure_SA)
         figure,
         plot(time,P_SA)
-        legend('SA',1);
+        legend('SA','NorthEast');
         xlabel('time (s)');
         ylabel('pressure (mmHg)');
     end
@@ -605,20 +605,20 @@ end
 if (flag_output.graph_pressure_RA)&&(flag_output.graph_pressure_RV)&&(flag_output.graph_pressure_PA)
     figure,
     plot(time,P_RA,time,P_RV,time,P_PA)
-    legend('RA','RV','PA',1);
+    legend('RA','RV','PA','NorthEast');
     xlabel('time (s)');
     ylabel('pressure (mmHg)');
 elseif (flag_output.graph_pressure_PA)&&(flag_output.graph_pressure_RV)    
     figure,
     plot(time,P_PA,time,P_RV)
-    legend('PA','RV',1);
+    legend('PA','RV','NorthEast');
     xlabel('time (s)');
     ylabel('pressure (mmHg)');
 else
     if(flag_output.graph_pressure_RA)
         figure,
         plot(time,P_RA)
-        legend('RA',1);
+        legend('RA','NorthEast');
         xlabel('time (s)');
         ylabel('pressure (mmHg)');
     end
@@ -626,7 +626,7 @@ else
     if(flag_output.graph_pressure_RV)
         figure,
         plot(time,P_RV)
-        legend('RV',1);
+        legend('RV','NorthEast');
         xlabel('time (s)');
         ylabel('pressure (mmHg)');
     end
@@ -634,7 +634,7 @@ else
     if(flag_output.graph_pressure_PA)
         figure,
         plot(time,P_PA)
-        legend('PA',1);
+        legend('PA','NorthEast');
         xlabel('time (s)');
         ylabel('pressure (mmHg)');
     end
@@ -643,14 +643,14 @@ end
 if (flag_output.graph_volume_LA)&&(flag_output.graph_volume_LV)
     figure,
     plot(time,V_LA,time,V_LV)
-    legend('LA','LV',1);
+    legend('LA','LV','NorthEast');
     xlabel('time (s)');
     ylabel('volume (ml)');
 else
     if(flag_output.graph_volume_LA)
         figure,
         plot(time,V_LA)
-        legend('LA',1);
+        legend('LA','NorthEast');
         xlabel('time (s)');
         ylabel('volume (ml)');
     end
@@ -658,7 +658,7 @@ else
     if(flag_output.graph_volume_LV)
         figure,
         plot(time,V_LV)
-        legend('LV',1);
+        legend('LV','NorthEast');
         xlabel('time (s)');
         ylabel('volume (ml)');
     end    
@@ -667,14 +667,14 @@ end
 if (flag_output.graph_volume_RA)&&(flag_output.graph_volume_RV)
     figure,
     plot(time,V_RA,time,V_RV)
-    legend('RA','RV',1);
+    legend('RA','RV','NorthEast');
     xlabel('time (s)');
     ylabel('volume (ml)');
 else
     if(flag_output.graph_volume_RA)
         figure,
         plot(time,V_RA)
-        legend('RA',1);
+        legend('RA','NorthEast');
         xlabel('time (s)');
         ylabel('volume (ml)');
     end
@@ -682,7 +682,7 @@ else
     if(flag_output.graph_volume_RV)
         figure,
         plot(time,V_RV)
-        legend('RV',1);
+        legend('RV','NorthEast');
         xlabel('time (s)');
         ylabel('volume (ml)');
     end    
@@ -691,14 +691,14 @@ end
 if (flag_output.graph_velocity_AV)&&(flag_output.graph_velocity_MV)
     figure,
     plot(time,Vel_AV,time,Vel_MV)
-    legend('AV','MV',1);
+    legend('AV','MV','NorthEast');
     xlabel('time (s)');
     ylabel('velocity (m/s)');
 else
     if(flag_output.graph_velocity_AV)
         figure,
         plot(time,Vel_AV)
-        legend('AV',1);
+        legend('AV','NorthEast');
         xlabel('time (s)');
         ylabel('velocity (m/s)');
     end
@@ -706,7 +706,7 @@ else
     if(flag_output.graph_velocity_MV)
         figure,
         plot(time,Vel_MV)
-        legend('MV',1);
+        legend('MV','NorthEast');
         xlabel('time (s)');
         ylabel('velocity (m/s)');
     end    
@@ -715,14 +715,14 @@ end
 if (flag_output.graph_velocity_TV)&&(flag_output.graph_velocity_PV)
     figure,
     plot(time,Vel_TV,time,Vel_PV)
-    legend('TV','PV',1);
+    legend('TV','PV','NorthEast');
     xlabel('time (s)');
     ylabel('velocity (m/s)');
 else
     if(flag_output.graph_velocity_TV)
         figure,
         plot(time,Vel_TV)
-        legend('TV',1);
+        legend('TV','NorthEast');
         xlabel('time (s)');
         ylabel('velocity (m/s)');
     end
@@ -730,7 +730,7 @@ else
     if(flag_output.graph_velocity_PV)
         figure,
         plot(time,Vel_PV)
-        legend('PV',1);
+        legend('PV','NorthEast');
         xlabel('time (s)');
         ylabel('velocity (m/s)');
     end    
@@ -811,7 +811,7 @@ end
 if flag_output.parLVPpreA
     figure('Name','Pre_A'),
     plot(P_LV)
-    legend('LV Pressure',1);
+    legend('LV Pressure','NorthEast');
     title('Select LV Pre-A wave LV end-diastolic pressure')
     xlabel('time point');
     ylabel('LV Pressure (mmHg)');
@@ -830,7 +830,7 @@ end
 if flag_output.parLVpostA
     figure('Name','Post_A'),
     plot(P_LV)
-    legend('LV Pressure',1);
+    legend('LV Pressure','NorthEast');
     title('Select LV Post-A wave LV end-diastolic pressure')
     xlabel('time point');
     ylabel('LV Pressure (mmHg)');
@@ -849,7 +849,7 @@ end
 if flag_output.parLV_Sdpdt
     figure('Name','LV Systolic dP/dt'),
     plot(Vel_MV)
-    legend('Mitral Valve Velocity',1);
+    legend('Mitral Valve Velocity','NorthEast');
     title('Select ramp points, firs at 1 m/s after at 3 m/s')
     xlabel('time point');
     ylabel('Mitral Valve Velocity (m/s)');
@@ -870,7 +870,7 @@ end
 if flag_output.parLV_Ddpdt
     figure('Name','LV Diastolic dP/dt'),
     plot(Vel_MV)
-    legend('Mitral Valve Velocity',1);
+    legend('Mitral Valve Velocity','NorthEast');
     title('Select ramp points, firs at 1 m/s after at 3 m/s')
     xlabel('time point');
     ylabel('Mitral Valve Velocity (m/s)');
@@ -891,7 +891,7 @@ end
 if flag_output.parLVIVCT
     figure('Name','LV isovolumetric contraction time'),
     plot(time,P_LA,time,P_LV,time,P_SA)
-    legend('LA','LV','SA',1);
+    legend('LA','LV','SA','NorthEast');
     xlabel('time (s)');
     title('Select time points')
     ylabel('Pressure (mmHg)');
@@ -912,7 +912,7 @@ end
 if flag_output.parLVIVRT
     figure('Name','LV isovolumetric relaxation time'),
     plot(time,P_LA,time,P_LV,time,P_SA)
-    legend('LA','LV','SA',1);
+    legend('LA','LV','SA','NorthEast');
     xlabel('time (s)');
     title('Select time points')
     ylabel('Pressure (mmHg)');
@@ -961,7 +961,7 @@ end
 if flag_output.parLAPreAV
     figure('Name','LA volume before atrial contraction'),
     plot(V_LA)
-    legend('LA Volumee',1);
+    legend('LA Volumee','NorthEast');
     title('Select point before atrial contraction')
     xlabel('time point');
     ylabel('LA Volume (ml)');
@@ -980,7 +980,7 @@ end
 if flag_output.parLAPostAV
     figure('Name','LA volume after atrial contraction'),
     plot(V_LA)
-    legend('LA Volume',1);
+    legend('LA Volume','NorthEast');
     title('Select point after atrial contraction')
     xlabel('time point');
     ylabel('LA Volume (ml)');
@@ -999,7 +999,7 @@ end
 if flag_output.parLASV
     figure('Name','LA stroke volume'),
     plot(V_LA)
-    legend('LA Volume',1);
+    legend('LA Volume','NorthEast');
     title('Select points for ejection period')
     xlabel('time point');
     ylabel('LA Volume (ml)');
@@ -1039,7 +1039,7 @@ end
 if flag_output.parLAPmean
     figure('Name','LA pressure'),
     plot(P_LA)
-    legend('LA Pressure',1);
+    legend('LA Pressure','NorthEast');
     title('Select points first max Pressure and then end-ejection point')
     xlabel('time point');
     ylabel('LA Pressure (mmHg)');
@@ -1060,7 +1060,7 @@ end
 if flag_output.parLAPVwave
     figure('Name','LA pressure'),
     plot(P_LA)
-    legend('LA Pressure',1);
+    legend('LA Pressure','NorthEast');
     title('Select point of max Pressure during ventricular systole')
     xlabel('time point');
     ylabel('LA Pressure (mmHg)');
@@ -1079,7 +1079,7 @@ end
 if flag_output.parLAPAwave
     figure('Name','LA pressure'),
     plot(P_LA)
-    legend('LA Pressure',1);
+    legend('LA Pressure','NorthEast');
     title('Select point of max Pressure during atrial systole')
     xlabel('time point');
     ylabel('LA Pressure (mmHg)');
@@ -1173,7 +1173,7 @@ end
 if flag_output.parRVPpreA
     figure('Name','Pre_A'),
     plot(P_RV)
-    legend('RV Pressure',1);
+    legend('RV Pressure','NorthEast');
     title('Select RV Pre-A wave RV end-diastolic pressure')
     xlabel('time point');
     ylabel('RV Pressure (mmHg)');
@@ -1192,7 +1192,7 @@ end
 if flag_output.parRVPpostA
     figure('Name','Post_A'),
     plot(P_RV)
-    legend('RV Pressure',1);
+    legend('RV Pressure','NorthEast');
     title('Select RV Post-A wave RV end-diastolic pressure')
     xlabel('time point');
     ylabel('RV Pressure (mmHg)');    
@@ -1238,7 +1238,7 @@ end
 if flag_output.parRAPreAV
     figure('Name','RA volume before atrial contraction'),
     plot(V_RA)
-    legend('RA Volumee',1);
+    legend('RA Volumee','NorthEast');
     title('Select point before atrial contraction')
     xlabel('time point');
     ylabel('RA Volume (ml)');
@@ -1257,7 +1257,7 @@ end
 if flag_output.parRAPostAV
     figure('Name','RA volume before after contraction'),
     plot(V_RA)
-    legend('RA Volumee',1);
+    legend('RA Volumee','NorthEast');
     title('Select point after atrial contraction')
     xlabel('time point');
     ylabel('RA Volume (ml)');
@@ -1276,7 +1276,7 @@ end
 if flag_output.parRASV
     figure('Name','RA stroke volume'),
     plot(V_RA)
-    legend('RA Volume',1);
+    legend('RA Volume','NorthEast');
     title('Select points for ejection period')
     xlabel('time point');
     ylabel('RA Volume (ml)');
@@ -1316,7 +1316,7 @@ end
 if flag_output.parRAPmean
     figure('Name','RA pressure'),
     plot(P_RA)
-    legend('RA Pressure',1);
+    legend('RA Pressure','NorthEast');
     title('Select points first max Pressure and then end-ejection point')
     xlabel('time point');
     ylabel('RA Pressure (mmHg)');
@@ -1336,7 +1336,7 @@ end
 if flag_output.parRAPVwave
     figure('Name','RA pressure'),
     plot(P_RA)
-    legend('RA Pressure',1);
+    legend('RA Pressure','NorthEast');
     title('Select point of V-wave Pressure during auricular systole')
     xlabel('time point');
     ylabel('RA Pressure (mmHg)');
@@ -1355,7 +1355,7 @@ end
 if flag_output.parRAPAwave
     figure('Name','RA pressure'),
     plot(P_RA)
-    legend('LA Pressure',1);
+    legend('LA Pressure','NorthEast');
     title('Select point of A-wave Pressure during atrial systole')
     xlabel('time point');
     ylabel('RA Pressure (mmHg)');
@@ -1674,7 +1674,7 @@ end
 if flag_output.parAoSBP
     figure('Name','Ao Systolic Blood Pressure'),
     plot(P_SA)
-    legend('Ao Pressure',1);
+    legend('Ao Pressure','NorthEast');
     title('Select point of Systolic Pressure')
     xlabel('time point');
     ylabel('Ao Systolic Blood Pressure (mmHg)');
@@ -1693,7 +1693,7 @@ end
 if flag_output.parApDBP
     figure('Name','Ao Diastolic blood pressure'),
     plot(P_SA)
-    legend('Ao Pressure',1);
+    legend('Ao Pressure','NorthEast');
     title('Select point of Diastolic Pressure')
     xlabel('time point');
     ylabel('Ao Diastolic blood pressure (mmHg)');
