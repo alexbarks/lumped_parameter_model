@@ -24,7 +24,6 @@ function varargout = lumped_model_inputs(varargin)
 
 % Last Modified by GUIDE v2.5 08-Sep-2015 10:07:05
 
-% vibhV jacked things up
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
