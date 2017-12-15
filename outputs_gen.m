@@ -22,7 +22,7 @@ function varargout = outputs_gen(varargin)
 
 % Edit the above text to modify the response to help outputs_gen
 
-% Last Modified by GUIDE v2.5 25-Sep-2015 14:33:36
+% Last Modified by GUIDE v2.5 15-Dec-2017 17:09:52
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -1570,3 +1570,35 @@ function parTVPVA_Callback(hObject, eventdata, handles)
 
 global flag_output;
 flag_output.parTVPVA = get(hObject,'Value');
+
+
+% --- Executes on button press in Basic_parameters.
+function Basic_parameters_Callback(hObject, eventdata, handles)
+% hObject    handle to Basic_parameters (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+global flag_output;
+flag_output.graph_pressure_LA = get(hObject,'Value');
+flag_output.graph_pressure_SA = get(hObject,'Value');
+flag_output.graph_pressure_LV = get(hObject,'Value');
+
+flag_output.graph_volume_LA = get(hObject,'Value');
+flag_output.graph_volume_LV = get(hObject,'Value');
+
+flag_output.graph_velocity_MV = get(hObject,'Value');
+flag_output.graph_velocity_AV = get(hObject,'Value');
+
+
+set(handles.graph_pressure_LA,'value', 1);
+set(handles.graph_pressure_SA,'value', 1);
+set(handles.graph_pressure_LV,'value', 1);
+
+set(handles.graph_volume_LA,'value', 1);
+set(handles.graph_volume_LV,'value', 1);
+
+set(handles.graph_velocity_MV,'value', 1);
+set(handles.graph_velocity_AV,'value', 1);
+
+
+
