@@ -22,7 +22,7 @@ function varargout = lumped_model_inputs(varargin)
 
 % Edit the above text to modify the response to help lumped_model_inputs
 
-% Last Modified by GUIDE v2.5 08-Sep-2015 10:07:05
+% Last Modified by GUIDE v2.5 18-Dec-2017 15:19:00
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -1995,3 +1995,12 @@ waitfor(f);
 set(handles.outputs_model,'BackgroundColor','green')
 
 
+
+
+% --- Executes on button press in close_all.
+function close_all_Callback(hObject, eventdata, handles)
+% hObject    handle to close_all (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+delete( setdiff( findall(0, 'type', 'figure'), lumped_model_inputs ) );
