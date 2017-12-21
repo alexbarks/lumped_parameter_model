@@ -2002,9 +2002,7 @@ function close_all_Callback(hObject, eventdata, handles)
 % hObject    handle to close_all (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-
-delete( setdiff( findall(0, 'type', 'figure'), lumped_model_inputs ) );
-
+close( setdiff( findall(0, 'type', 'figure'), lumped_model_inputs ) );
 
 
 % --- Executes on button press in Save_all.
@@ -2024,8 +2022,7 @@ set(hinput(1), 'PaperPosition', [0 0 35 25]);  %x_width=10cm y_width=15cm
 saveas(hinput(1), [fullfile(PathName,'input') '.png']);
 saveas(hinput(m), [saveDataName '.png']);
 end
-clc
-clear all
+
 
 
 
