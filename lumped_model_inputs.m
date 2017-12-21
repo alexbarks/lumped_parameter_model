@@ -22,7 +22,7 @@ function varargout = lumped_model_inputs(varargin)
 
 % Edit the above text to modify the response to help lumped_model_inputs
 
-% Last Modified by GUIDE v2.5 18-Dec-2017 15:19:00
+% Last Modified by GUIDE v2.5 20-Dec-2017 15:39:39
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -2004,3 +2004,32 @@ function close_all_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 delete( setdiff( findall(0, 'type', 'figure'), lumped_model_inputs ) );
+
+
+
+% --- Executes on button press in save_all.
+function save_all_Callback(hObject, eventdata, handles)
+% hObject    handle to save_all (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+[PathName] = uigetdir;
+% hfigs = get(0, 'children');
+hinput = findall(0,'type','figure');
+for m=2:1:4
+saveDataName = fullfile(PathName,sprintf('%s%01d', 'figure', m-1));
+set(hinput(1), 'PaperUnits', 'centimeters');
+set(hinput(1), 'PaperPosition', [0 0 35 25]);  %x_width=10cm y_width=15cm
+saveas(hinput(1), [fullfile(PathName,'input') '.png']);
+saveas(hinput(m), [saveDataName '.png']);
+end
+clc
+clear all
+
+
+
+
+
+
+
+
