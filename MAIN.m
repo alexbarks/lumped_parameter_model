@@ -1,5 +1,7 @@
 clear all; close all; clc; format compact; format long e;
 
+[PathName] = uigetdir;
+
 % MAIN VARIABLE INPUT PARAMETERS (Read paper for equations and meaning of parameters)
 
 outputfile = './output/output_data.txt';
@@ -184,23 +186,23 @@ t1 = t2 - displaytime/dt;
 time = t(t1:t2);
 
 subplot(3,2,1), plot(time,p(t1:t2,1),time,p(t1:t2,2),time,p(t1:t2,3))
-legend('LA','LV','SA',1);
+legend('LA','LV','SA','Location','northeast');
 %xlabel('time (s)');
 ylabel('pressure (mmHg)');
 %axis([0.2 1.4 0 120])
 subplot(3,2,2), plot(time,p(t1:t2,5),time,p(t1:t2,6),time,p(t1:t2,7))
-legend('RA','RV','PA',1);
+legend('RA','RV','PA','Location','northeast');
 %xlabel('time (s)');
 %ylabel('pressure (mmHg)');
 %axis([0.2 1.4 0 40])
 
 subplot(3,2,3), plot(time,y(t1:t2,9),time,y(t1:t2,10))
-legend('LA','LV',1);
+legend('LA','LV','Location','northeast');
 %xlabel('time (s)');
 ylabel('volume (ml)');
 %axis([0.2 1.4 20 120])
 subplot(3,2,4), plot(time,y(t1:t2,13),time,y(t1:t2,14))
-legend('RA','RV',1);
+legend('RA','RV','Location','northeast');
 %xlabel('time (s)');
 %ylabel('volume (ml)');
 %axis([0.2 1.4 20 120])
@@ -218,12 +220,12 @@ end
 
 %subplot(3,2,5), plot(time,y(t1:t2,2)/MVpar(2),time,y(t1:t2,3)/AVpar(2))
 subplot(3,2,5), plot(time,y(t1:t2,2)/MVpar(2),time,Aovel_new)
-legend('MV','AV',1);
+legend('MV','AV','Location','northeast');
 xlabel('time (s)');
 ylabel('velocity (cm/s)');
 %axis([0.2 1.4 0 120])
 subplot(3,2,6), plot(time,y(t1:t2,6)/TVpar(2),time,y(t1:t2,7)/PVvpar(2))
-legend('TV','PV',1);
+legend('TV','PV','Location','northeast');
 xlabel('time (s)');
 %ylabel('velocity (cm/s)');
 %axis([0.2 1.4 0 120])
@@ -259,3 +261,10 @@ end
 disp(strcat('Volume Regurgitant (ml):',num2str(Ao_reg_vol)))
 Ao_rf=Ao_reg_vol/SV*100;
 disp(strcat('Regurgitant Fraction (%):',num2str(Ao_rf)))
+
+
+figf = get(handle(gcf), 'JavaFrame');
+set(figf,'Maximized',1)
+saveas(gcf,[fullfile(PathName,'Vname') '.png']);
+
+
